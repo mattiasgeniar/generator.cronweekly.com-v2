@@ -1,0 +1,61 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "052631a9cb121a817d24ff4ed782c584",
+    "packages": [
+        {
+            "name": "djchen/pocket-api-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/djchen/pocket-api-php.git",
+                "reference": "96c1920082c2265de6a5d73580c5a7bad433c1ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/djchen/pocket-api-php/zipball/96c1920082c2265de6a5d73580c5a7bad433c1ec",
+                "reference": "96c1920082c2265de6a5d73580c5a7bad433c1ec",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Pocket": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Chen",
+                    "email": "dan@djc.me"
+                }
+            ],
+            "description": "A PHP wrapper for interfacing with Pocket's API (getpocket.com)",
+            "homepage": "https://github.com/djchen/pocket-api-php",
+            "keywords": [
+                "api",
+                "pocket"
+            ],
+            "time": "2016-11-13T18:58:17+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "djchen/pocket-api-php": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "djchen/pocket-api-php": "dev-master"
+    }
+}
