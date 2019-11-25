@@ -1,18 +1,21 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
-<head><meta charset="utf-8"><!-- utf-8 works for most cases -->
-  <meta name="viewport" content="width=device-width"><!-- Forcing initial-scale shouldn't be necessary -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Use the latest (edge) version of IE rendering engine -->
-  <meta name=”x-apple-disable-message-reformatting”><!-- Disable auto-scale in iOS 10 Mail entirely -->
+<head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+
   <title>Cron.weekly issue #211</title>
-  <!-- The title tag shows in email notifications, like Android 4.4. --><!-- Web Font / @font-face : BEGIN --><!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. --><!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --><!--[if mso]>
+  <!-- The title tag shows in email notifications, like Android 4.4. -->
+  <!--[if mso]>
         <style>
             * {
                 font-family: sans-serif !important;
             }
         </style>
-    <![endif]--><!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks.  --><!--[if !mso]><!--><!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> --><!--<![endif]--><!-- Web Font / @font-face : END --><!-- CSS Reset -->
+  <![endif]-->
+
   <style type="text/css">
         /* What it does: Remove spaces around the email design added by some email clients. */
         /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
@@ -42,7 +45,8 @@
             mso-table-rspace: 0pt !important;
         }
 
-        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug.
+           Applies table-layout to the first 2 tables then removes for anything nested deeper. */
         table {
             border-spacing: 0 !important;
             border-collapse: collapse !important;
@@ -74,56 +78,137 @@
         }
         .button-td:hover,
         .button-a:hover {
-            background: #555555 !important;
-            border-color: #555555 !important;
+            background: #1a202c !important;
+            border-color: #1a202c !important;
         }
   </style>
 </head>
 <body bgcolor="#fff" style="margin: 0;" width="100%">
-  <center style="width: 100%; background: #fff;"><!-- Visually Hidden Preheader Text : BEGIN -->
-    <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">News and tools for Linux sysadmins and open source users.</div>
-      <!-- Visually Hidden Preheader Text : END --><!--
-          Set the email width. Defined in two places:
-          1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
-          2. MSO tags for Desktop Windows Outlook enforce a 600px width.
-      -->
+  <center style="width: 100%; background: #fff;">
 
-    <div style="max-width: 600px; margin: auto;"><!--[if mso]>
-            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
-            <tr>
+    <!-- Visually Hidden Preheader Text : BEGIN -->
+    <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
+      News and tools for Linux sysadmins and open source users.
+    </div>
+    <!-- Visually Hidden Preheader Text : END -->
+
+    <!--
+      Set the email width. Defined in two places:
+      1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+      2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+    -->
+
+    <div style="max-width: 600px; margin: auto;">
+      <!--[if mso]>
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+          <tr>
             <td>
-            <![endif]--><!-- Email Header : BEGIN --><!-- Email Header : END --><!-- Email Body : BEGIN -->
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 600px;" width="100%"><!-- Hero Image, Flush : BEGIN -->
+      <![endif]-->
+
+      <!-- Email Body : BEGIN -->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 600px;" width="100%">
+        <!-- Hero Image, Flush : BEGIN -->
         <tbody>
           <tr>
-            <td bgcolor="#ffffff" style="text-align: right; font-family: sans-serif; font-size: 12px; mso-height-rule: exactly; color: #eeeeee; line-height: 25px;"><a href="https://www.cronweekly.com/issue-211" target="_blank" style="color: #ababab">Read this issue online</a></td>
+            <td bgcolor="#ffffff" style="text-align: right; font-family: sans-serif; font-size: 12px; mso-height-rule: exactly; color: #eeeeee; line-height: 45px;"><a href="https://www.cronweekly.com/issue-211" target="_blank" style="color: #ababab">
+              Read this issue online &raquo;</a>
+            </td>
           </tr>
           <tr>
-            <td bgcolor="#333333" style="padding-top: 30px; padding-bottom: 20px; font-family: sans-serif; font-size: 40px; mso-height-rule: exactly; line-height: 40px; color: #eeeeee; text-align:center">CRON.WEEKLY</td>
+            <td bgcolor="#90cdf4" style="padding-top: 30px; padding-bottom: 20px; font-family: sans-serif; font-size: 40px; mso-height-rule: exactly; line-height: 40px; color: #1a202c; text-align: center; font-weight: 100;">
+              CRON.WEEKLY
+            </td>
           </tr>
           <tr>
-            <td bgcolor="#333333" style="padding: 20px; font-family: sans-serif; font-size: 20px; mso-height-rule: exactly; line-height: 30px; color: #eeeeee; text-align:center">kernel 4.8, IP Spoofing, RethinkDB, ProxySQL, Postgres, Elasticsearch & more!</td>
+            <td bgcolor="#90cdf4" style="padding: 20px; font-family: sans-serif; font-size: 20px; mso-height-rule: exactly; line-height: 30px; color: #1a202c; text-align: center;  font-weight: 100;">
+              kernel 4.8, IP Spoofing, RethinkDB, ProxySQL, Postgres, Elasticsearch & more!
+            </td>
           </tr>
           <tr>
-            <td bgcolor="#ffffff" style="padding-top: 20px; font-family: sans-serif; font-size: 20px; mso-height-rule: exactly; line-height: 20px; color: #000000; text-align:center; font-style:italic; ">issue #211 for Sunday, December 1, 2019</td>
+            <td valign="top" align="left" background="cronweekly_header_line_top.png" style="background-repeat: no-repeat; background-size: cover; padding: 20px; background-position: bottom;">
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff" style="padding-top: 30px; padding-bottom: 20px; font-family: sans-serif; font-size: 24px; mso-height-rule: exactly; line-height: 20px; color: #1a202c; text-align: center; font-style: italic; ">
+              issue #211 for Sunday, December 1, 2019
+            </td>
           </tr>
           <tr>
             <td bgcolor="#ffffff">
               <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                 <tbody>
                   <tr>
-                    <td style="padding-left: 10px; padding-right: 10px; padding-top: 20px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
+                    <td style="padding-left: 10px; padding-right: 10px; padding-top: 20px; font-family: sans-serif; font-size: 16px; mso-height-rule: exactly; line-height: 26px; color: #1a202c; font-weight: 100">
                       If you're reading this, it means the mailing list migration went as planned! If you aren't ... well ... something something schrödinger. :-)<br />
-<br />
-                      <br /> <br />
+
                       <!-- mail body -->
-                      <h1 style="font-family: Helvetica; font-size: 33px; line-height: 1.1; display: block; margin-top: 22px; margin-bottom: 22px">News</h1>
-<h2 style="font-family: Helvetica; font-size: 20px; line-height: 1.1; display: block; margin-top: 16px; margin-bottom: 16px"><a target="_blank" style="word-wrap:break-word;color:#080808;font-weight:normal;text-decoration:underline;" href="https://kernelnewbies.org/Linux_4.8">Linux kernel 4.8</a></h2>
-Last Sunday, the 4.8 kernel was released: lots of new hardware support, improved drivers and a lot of storage improvements: a btrfs rewrite, the basics to add support for data deduplication and copy-on-write for XFS, ...
-<h2 style="font-family: Helvetica; font-size: 20px; line-height: 1.1; display: block; margin-top: 16px; margin-bottom: 16px"><a target="_blank" style="word-wrap:break-word;color:#080808;font-weight:normal;text-decoration:underline;" href="https://charity.wtf/2016/10/02/the-accidental-dba/">The accidental DBA</a></h2>
-A post I think many of us can relate to: you find yourself being a sysadmin or developer and suddenly <em>you're a database administrator</em>. You can't look at databases the same way you look at webservers, it's a different mindset. This post dives into a post-portem of a "<em>MongoDB gone wrong</em>" and critiques the methods used.
-<h2 style="font-family: Helvetica; font-size: 20px; line-height: 1.1; display: block; margin-top: 16px; margin-bottom: 16px"><a target="_blank" style="word-wrap:break-word;color:#080808;font-weight:normal;text-decoration:underline;" href="https://scotthelme.co.uk/still-think-you-dont-need-https/">Still think you don't need HTTPs?</a></h2>
-By now, everyone benefits from using HTTPs on websites. This post gives a good overview of the reasons <em>why</em> you should switch to HTTPs. Time to use these arguments to change all your configs to TLS!
+                      <h1 style="font-family: Helvetica; font-size: 33px; line-height: 1.1; display: block; margin-top: 22px; margin-bottom: 22px; font-weight: 100">
+                        News
+                      </h1>
+
+                      <h2 style="
+					  	/* Style for header block */
+						font-family: Helvetica;
+						font-size: 20px;
+						line-height: 1.1;
+						display: block;
+						margin-top: 30px;
+						margin-bottom: 16px
+					">
+						<a target="_blank" style="
+							/* Style for header links */
+							border-bottom-color: #d69e2e;
+							border-bottom-left-radius: 4px;
+							border-bottom-right-radius: 4px;
+							border-bottom-style: solid;
+							border-bottom-width: 2px;
+							color: #1a202c;
+							font-size: 20px;
+							font-weight: 400;
+							padding-bottom: 1.6px;
+							padding-left: 3.2px;
+							padding-right: 3.2px;
+							padding-top: 1.6px;
+							text-decoration-line: none;
+							line-height:25px;
+							" href="https://kernelnewbies.org/Linux_4.8">
+                          Linux kernel 4.8
+                        </a>
+                      </h2>
+
+                      Last Sunday, the 4.8 kernel was released: lots of new hardware support, improved drivers and a lot of storage improvements: a btrfs rewrite, the basics to add support for data deduplication and copy-on-write for XFS, ...
+
+                      <h2 style="
+					  	/* Style for header block */
+						font-family: Helvetica;
+						font-size: 20px;
+						line-height: 1.1;
+						display: block;
+						margin-top: 30px;
+						margin-bottom: 16px
+					">
+                        <a target="_blank" style="
+						/* Style for header links */
+						border-bottom-color: #d69e2e;
+						border-bottom-left-radius: 4px;
+						border-bottom-right-radius: 4px;
+						border-bottom-style: solid;
+						border-bottom-width: 2px;
+						color: #1a202c;
+						font-size: 20px;
+						font-weight: 400;
+						padding-bottom: 1.6px;
+						padding-left: 3.2px;
+						padding-right: 3.2px;
+						padding-top: 1.6px;
+						text-decoration-line: none;
+						line-height:25px;
+						" href="https://charity.wtf/2016/10/02/the-accidental-dba/">
+                          The accidental DBA
+                        </a>
+                      </h2>
+
+                      A post I think many of us can relate to: you find yourself being a sysadmin or developer and suddenly <em>you're a database administrator</em>. You can't look at databases the same way you look at webservers, it's a different mindset. This post dives into a post-portem of a "<em>MongoDB gone wrong</em>" and critiques the methods used.
+
                     </td>
                   </tr>
                 </tbody>
@@ -136,7 +221,7 @@ By now, everyone benefits from using HTTPs on websites. This post gives a good o
               <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                 <tbody>
                   <tr>
-                    <td style="padding: 40px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
+                    <td style="padding: 40px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #1a202c; font-weight: 100; text-align: center">
                       <hr style="color: #333333; margin-bottom: 15px" />
                       Thanks for reading this week's <em>cron.weekly</em>! Did you like it?
                     </td>
@@ -159,10 +244,10 @@ By now, everyone benefits from using HTTPs on websites. This post gives a good o
                           <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: auto;">
                             <tbody>
                               <tr>
-                                <td class="button-td" style="border-radius: 3px; background: #3bba39; text-align: center;">
+                                <td class="button-td" style="border-radius: 5px; background: #3bba39; text-align: center;">
                                   <a target="_blank" href="https://www.cronweekly.com/i-loved-it/" style="background: #3bba39; border: 15px solid #3bba39; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;">
                                     &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <span style="color:#ffffff">
+                                    <span style="color:#ffffff; font-size: 24px; font-weight: 100">
                                       :-)
                                     </span>
                                     &nbsp;&nbsp;&nbsp;&nbsp;
@@ -174,7 +259,7 @@ By now, everyone benefits from using HTTPs on websites. This post gives a good o
                         </td>
                       </tr>
                       <tr>
-                        <td class="stack-column-center" style="text-align: center;font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding: 10px 10px 0;">
+                        <td class="stack-column-center" style="text-align: center;font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #1a202c; padding: 10px 10px 0; font-weight: 100;">
                           Loved it!
                         </td>
                       </tr>
@@ -192,7 +277,7 @@ By now, everyone benefits from using HTTPs on websites. This post gives a good o
                                   <td class="button-td" style="border-radius: 3px; background: #d9403e; text-align: center;">
                                     <a target="_blank" href="https://www.cronweekly.com/expected-more/" style="background: #d9403e; border: 15px solid #d9403e; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;">
                                       &nbsp;&nbsp;&nbsp;&nbsp;
-                                      <span style="color:#ffffff">
+                                      <span style="color:#ffffff; font-size: 24px; font-weight: 100">
                                         :-(
                                       </span>
                                       &nbsp;&nbsp;&nbsp;&nbsp;
@@ -204,7 +289,7 @@ By now, everyone benefits from using HTTPs on websites. This post gives a good o
                           </td>
                         </tr>
                         <tr>
-                          <td class="stack-column-center" style="text-align: center;font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding: 10px 10px 0;">
+                          <td class="stack-column-center" style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #1a202c; padding: 10px 10px 0; font-weight: 100;">
                             I expected better.
                           </td>
                         </tr>
