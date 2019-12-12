@@ -21,12 +21,19 @@ author: mattias
 
 # For writing: set a date in the past, otherwise Hugo won't render it
 date: {$today}
-#date: {$nextSunday}T08:00:00+01:00
-#publishDate: {$nextSunday}T08:00:00+01:00
+#date: {$nextSunday}T07:50:00+01:00
+#publishDate: {$nextSunday}T07:50:00+01:00
 url: /cronweekly/issue-{$newIssueNumber}/
 ---
 
 Hi everyone!
+
+# News & general
+
+# Tools & Projects
+
+# Guides & Tutorials
+
 
 {$content}
 
