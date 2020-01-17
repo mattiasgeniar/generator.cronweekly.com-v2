@@ -28,11 +28,11 @@ Hi everyone! 👋
 
 Welcome to cron.weekly issue #{$newIssueNumber}.
 
-# 🗞 News & general
+# News & general 🗞
 
-# 🛠 Tools & Projects
+# Tools & Projects 🛠
 
-# 🎓 Guides & Tutorials
+# Guides & Tutorials 🎓
 
 
 {$content}
