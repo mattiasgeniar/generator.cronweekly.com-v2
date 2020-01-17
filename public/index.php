@@ -61,7 +61,16 @@ if (isset($_GET['authorized'])) {
 ?>
 		</textarea>
 
-		<input type="submit" name="generate" value="Generate newsletter in markdown &raquo;" class="mt-8 mb-16 appearance-none text-white text-base font-semibold tracking-wide uppercase p-3 rounded shadow bg-blue-900 hover:bg-blue-800" />
+		<input type="submit" name="generate" value="Generate newsletter in markdown &raquo;" class="mt-8 mb-8 appearance-none text-white text-base font-semibold tracking-wide uppercase p-3 rounded shadow bg-blue-900 hover:bg-blue-800" />
+
+		<p class="block mb-8">
+			To delete the items in Pocket:
+
+			<ul>
+				<li class="ml-4"><code>j</code>: select next item</li>
+				<li class="ml-4"><code>a</code>: archive selected item</li>
+			</ul>
+		</p>
 
 	</form>
 </div>
