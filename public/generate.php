@@ -24,13 +24,15 @@ publishDate: {$nextSunday}T07:50:00+01:00
 url: /cronweekly/issue-{$newIssueNumber}/
 ---
 
-Hi everyone!
+Hi everyone! 👋
 
-# News & general
+Welcome to cron.weekly issue #{$newIssueNumber}.
 
-# Tools & Projects
+# 🗞 News & general
 
-# Guides & Tutorials
+# 🛠 Tools & Projects
+
+# 🎓 Guides & Tutorials
 
 
 {$content}
