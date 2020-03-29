@@ -19,8 +19,8 @@ $template = <<<TEMPLATE
 title: 'cron.weekly issue #{$newIssueNumber}: '
 author: mattias
 
-date: {$nextSunday}T07:50:00+01:00
-publishDate: {$nextSunday}T07:50:00+01:00
+date: {$nextSunday}T06:50:00+01:00
+publishDate: {$nextSunday}T06:50:00+01:00
 url: /cronweekly/issue-{$newIssueNumber}/
 ---
 
