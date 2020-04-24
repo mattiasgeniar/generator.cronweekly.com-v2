@@ -1,10 +1,12 @@
 <?php
 
+require('../config.php');
+
 $content = $_POST['markdown'];
 
-$pathToCronWeekly = "/Users/mattias/Projects/Webdevelopment/ma.ttias.be/content/cronweekly/";
+$pathToCronWeekly = "/Users/". $user ."/Projects/Webdevelopment/ma.ttias.be/content/cronweekly/";
 
-$lastIssue = `ls -h /Users/mattias/Projects/Webdevelopment/ma.ttias.be/content/cronweekly | grep 'issue' | tail -n 1`;
+$lastIssue = `ls -h /Users/${user}/Projects/Webdevelopment/ma.ttias.be/content/cronweekly | grep 'issue' | tail -n 1`;
 $lastIssuePieces = explode('-issue-', $lastIssue);
 $lastIssueNumber = (int) str_replace('.md', '', $lastIssuePieces[1]);
 
